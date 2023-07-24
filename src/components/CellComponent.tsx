@@ -8,7 +8,7 @@ interface CellComponentType {
 export const CellComponent: React.FC<CellComponentType> = ({cell}) => {
     return (
         <div className={['cell', cell.color].join(' ')}>
-
+            {cell.figure?.logo && <img src={cell.figure.logo} alt=""/>}
         </div>
     );
 };
